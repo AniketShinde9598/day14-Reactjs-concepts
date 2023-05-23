@@ -1,9 +1,9 @@
-import TodoOps from "./components/TodoOps";
+import Addimage from "./components/Addimage";
 
 function App() {
   return (
     <div>
-      <TodoOps />
+      <Addimage />
     </div>
   );
 }
