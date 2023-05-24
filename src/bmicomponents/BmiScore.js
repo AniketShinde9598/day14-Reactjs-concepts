@@ -1,10 +1,12 @@
 import React from "react";
 
 function BmiScore(props) {
+  const { Mybmi, Mybmitype } = props;
   return (
     <div>
-      <h4>BmiScore : {props.Mybmi}</h4>
-      <h4>BmiType : {props.Mybmitype}</h4>
+      BmiScore : {Mybmi}
+      <br />
+      BmiType : {Mybmitype}
     </div>
   );
 }
