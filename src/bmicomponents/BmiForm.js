@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
-function BmiForm() {
+function BmiForm(getData) {
   const { height, setHeight } = useState("");
   const { weight, setWeight } = useState("");
+
+  const onSubmit = (e) => e.preventDefault();
+  if (isNaN(weight) || isNaN(height)) {
+    console.log("Wrong input");
+  } else getData(weight, height);
 
   return (
     <div>
       BmiForm for user input
-      <Form className="" onSubmit={onSubmit}>
+      <Form className="formbmi" onSubmit={onSubmit}>
         <Form.Group className="mb-3" controlId="formHeight">
           <Form.Control
             type="text"

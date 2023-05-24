@@ -6,6 +6,9 @@ import BmiForm from "./bmicomponents/BmiForm";
 function App() {
   const [bmi, setbmi] = useState(18);
   const [bmitype, setbmitype] = useState("overweight");
+  const onFormSubmit = (w, h) => {
+    console.log(h + " : " + w);
+  };
 
   return (
     <div className="App">
