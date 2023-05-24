@@ -4,13 +4,16 @@ import "./App.css";
 
 function App() {
   const [bmi, setbmi] = useState(18);
+  const [bmitype, setbmitype] = useState("overweight");
 
   return (
     <div className="App">
       <h2>Welcome to React</h2>
-      <h4>BMI : {bmi}</h4>
+      <h4>
+        BMI : {bmi} {bmitype}
+      </h4>
       <button onClick={() => setbmi(bmi + 5)}>Click</button>
-      <BmiScore Mybmi={bmi} />
+      <BmiScore Mybmi={bmi} Mybmitype={bmitype} />
     </div>
   );
 }
